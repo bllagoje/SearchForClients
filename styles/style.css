@@ -1,0 +1,919 @@
+* {
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+/* -------------------------------------- */
+
+#Kontejner1 {
+    display: flex;
+    width: 700px;
+    height: 250px;
+    margin: 10px;
+
+
+
+    background-color: #A2ABB5;
+}
+
+#Levak {
+    display: flex;
+    width: 50px;
+    height: auto;
+    background-image: url("../images/svg/018-selective.svg");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    margin-top: 10px;
+    background-position: top;
+    /* margin-left: 10px; */
+    background-color: #A2ABB5;
+}
+
+#Pretraga {
+    display: flex;
+    flex-direction: row;
+}
+
+#PretragaLevo {
+    display: flex;
+    flex-direction: column;
+} 
+
+#PretragaDesno {
+    display: flex;
+    flex-direction: column;
+}
+
+#ImePrezime {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 50%;
+    padding: 10px;
+    border-left: 1px dotted black;
+    /* background-color: rgba(231, 17, 17, 0.5); */
+}
+
+#ImePrezime input {
+    width: auto;
+    height: 30px;
+} 
+
+#GodRodjenja {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* height: 150px; */
+    height: 50%;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-left: 1px dotted black;
+    /* background-color: rgba(231, 17, 17, 0.5); */
+    /* background-color: aquamarine; */
+}
+
+#GodRodjOdDo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    background-color: #95D9DA;
+}
+
+#GodRodjenja input {
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#BrendKartice {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 350px;
+    height: 75%;
+    border-left: 1px dotted black;
+    /* border-bottom: 1px solid black; */
+    /* background-color: darkgoldenrod; */
+}
+
+#BrendKartice p {
+    height: 1px;
+    width: 1px;
+}
+
+#BrendKartice input {
+    width: auto;
+    /* height: 30px; */
+    height: auto;
+}
+
+#DodatniFilteri {
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    width: 350px;
+    height: 25%;
+    align-items: center;
+    justify-content: left;
+    border-left: 1px dotted black;
+    border-top: 1px dotted black;
+    background-color: #AE8CA3;
+}
+
+#FilteriSlika {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../images/svg/044-add-1.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    /* background-color: darksalmon; */
+} 
+
+#DodatniFilteri.Otvoreno #FilteriSlika{
+    background-image: url("../images/svg/049-remove.svg");
+}
+
+#DodatniFilteri span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* -------------------------------------- */
+#Kontejner2 {
+    display: flex;
+    width: 700px;
+    height: 150px;
+    margin: 10px;
+    background-color: #AE8CA3;
+}
+
+#LevaStrana2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    border-right: 1px dotted black;
+    /* background-color: cornflowerblue; */
+}
+
+#DesnaStrana2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    /* background-color: darkgreen; */
+}
+
+.Stavka {
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    padding: 5px;
+    margin: 5px 0;    
+}
+
+.CheckBox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-color: white;
+    border: 0.5px solid black;
+    margin-right: 3px;
+}
+
+.CheckBox.Oznaceno{
+    background-image: url(../images/svg/011-checked.svg);
+}
+
+#LevaStrana2 #UnosIznosVeciOd {
+    width: 60px;
+    height: 25px;
+}
+
+#DesnaStrana2 #UnosKarticaVazi {
+    width: 50px;
+    height: 25px;
+}
+/* -------------------------------------- */
+
+#Kontejner3 {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    width: 700px;
+    min-height: 100px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #A2ABB5;
+}
+
+#Pretrazi {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: white
+}
+
+#PretraziSlika {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/svg/031-loupe.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Pretrazi p {
+    margin-left: 10px;
+} 
+
+#BrisiFiltere {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: white
+}
+
+#BrisiFiltereSlika {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/svg/054-remove-3.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#BrisiFiltere p {
+    margin-left: 5px;
+}
+
+#PredefinisaniSetoviFiltera {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: white
+}
+
+#PredefinisaniSetoviFilteraSlika {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/svg/036-clipboard.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+#SnimiSetFiltera {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 10px;
+}
+
+#SnimiSetFilteraSlika {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/svg/001-diskette.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+/* -------------------------------------- */ 
+
+.Skriveno {
+    display: none !important;
+    transition: all .3s;
+}
+
+/* -------------------------------------- */ 
+
+#KlijentiBezDuga, #KlijentiIznos, #KarticaVazi {
+    cursor: pointer;
+}
+
+
+#BrendKartice #CBBrendKartice {
+    /* padding: 10px 8px; */
+    overflow-y: auto;
+    /* opacity: 0; */
+    /* pointer-events: none; */
+}
+
+#CBBrendKartice li {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    /* display: none; */
+    padding: 3px;
+}
+
+/* #CBBrendKartice li span {
+    color: #535253;
+} */
+
+#CBBrendKartice li:hover{
+    background-color: #AE8CA3;
+}
+
+/* -------------------------------------- */ 
+
+#Kontejner4 {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    min-height: 400px;
+    height: auto;
+    margin: 10px;
+
+    background-color: #A2ABB5;
+}
+
+.Kartica {
+    cursor: pointer;
+    display: flex;
+    width: 700px;
+    height: 90px;
+    border: 1px solid black;
+    margin-top: 20px; 
+
+    background-color: #817F82;
+}
+
+.RedniBr {
+    display: flex;
+    width: 80px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+
+    background-color: #6DD6DA;
+}
+
+.RedniBr span {
+    font-size: 40px;
+    /* font-weight: bold; */
+}
+
+.KarticaPodaci {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    /* border-right: 20px solid green; */
+}
+
+/* -------------------------------------- */ 
+.KarticaPodaci.JedanBlokiranRacun {
+    border-right: 20px solid #FDDB27FF;
+}
+
+.KarticaPodaci.NegativanZbirStanja {
+    border-right: 20px solid #E10600FF;
+}
+
+.KarticaPodaci.PozitivanZbirStanja {
+    border-right: 20px solid #2BAE66FF;
+}
+/* -------------------------------------- */ 
+
+.GornjiRed {
+    display: flex; 
+    width: 100%;
+    height: 50%;
+}
+
+.DonjiRed {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    border-top: 1px dotted black;
+    /* background-color: darkolivegreen; */
+}
+
+.ImePrezime {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    /* border-right: 1px dotted black; */
+    /* background-color: cornflowerblue; */
+}
+
+.ImePrezime span {
+    font-size: 25px;
+    /* font-weight: bold; */
+    margin-left: 5px;
+}
+
+.StanjeNaRacunima {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    width: 50%;
+    height: auto; 
+    /* background-color: darkgray; */
+}
+
+.StanjeNaRacunima span {
+    font-size: 19px;
+    /* margin-right: 10px; */
+}
+
+.DatumRodjenja {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.DatumRodjenja span {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+.ModalniKontejner {
+    display: none;
+
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.ModalniSadrzaj {
+    /* width: 40%; */
+    width: 600px;
+    min-height: 160px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    background-color: #6DD6DA;
+}
+
+.ZatvoriModalni {
+    cursor: pointer;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    /* margin: 10px; */
+}
+
+.ZatvoriModalni:hover {
+    color: #E10600FF;
+}
+
+.PodaciModalni {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 80%;
+    font-size: 25px;
+    /* background-color: honeydew; */
+    margin-bottom: 10px;
+}
+
+.PodaciModalni span {
+    /* width: 50%; */
+    margin-right: 10px;
+}
+
+.PodaciKontejner {
+    display: flex;
+    font-size: 20px;
+    color: #817F82;
+    margin-bottom: 20px;
+}
+
+.PodaciModalniLevo {
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    width: 40%;
+    white-space: nowrap;
+    /* background-color: lightcoral; */
+}
+
+.ModalniPodaciDesno {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    white-space: nowrap;
+    /* background-color: lightskyblue; */
+}
+
+.Tabovi {
+    display: flex;
+    width: auto;
+    height: auto;
+    /* background-color: lightslategrey; */
+}
+
+
+.Tabovi > div:nth-of-type(1) {
+    background-color: lightskyblue;
+}
+
+.Tabovi > div:nth-of-type(2) {
+    background-color: red;
+}
+
+.Tabovi > div:nth-of-type(3) {
+    background-color: orange;
+}
+
+.Tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 33.33%;
+    height: auto;
+    border: 1px solid black;
+    cursor: pointer;
+    /* margin: 10px; */
+    /* background-color: mediumturquoise; */
+}
+
+.SadrzajTabKontejner {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+
+    /* margin: 10px; */
+    /* justify-content: center;
+    align-items: center; */
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #A2ABB5;
+}
+
+.SadrzajTabKontejner > div:nth-of-type(1) {
+    border: 5px solid lightskyblue;
+} 
+.SadrzajTabKontejner > div:nth-of-type(2) {
+    border: 5px solid red;
+}
+
+.SadrzajTabKontejner > div:nth-of-type(3) {
+    border: 5px solid orange;
+}
+
+
+.Skriveno {
+    display: none !important;
+}
+
+.Sadrzaj {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    word-break:break-all;
+    /* background-color: orange; */
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.Greska {
+    /* background-color: rgba(245, 36, 29, 0.87) !important; */
+    /* background-color: #c00000 !important; */
+    color: #c00000 !important;
+    font-weight: bold;
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#SnackbarKontejner {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    /* da bi moglo da se klikce kroz ovaj div: */
+    pointer-events: none; 
+    padding: 5px;
+    z-index: 10;
+}
+
+#SnackBar {
+    height: 50px;
+    min-width: 250px;   
+    /* da ne bi moglo da se klikce kroz ovaj div: */
+    pointer-events: auto; 
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 2px 10px;
+    color: white;
+}
+
+#SnackIkona {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+    flex-shrink: 0; /* ne dozvoljava da se suzi kada je 0 */
+    background-size: cover;
+}
+
+#SnackZatvori {
+    cursor: pointer;
+}
+
+.SnackGreska {
+    background-color: red;
+    color: white;
+}
+
+#SnackBar.SnackGreska #SnackIkona {
+    background-image: url(../images/svg/007-forbidden.svg);
+}
+
+#SnackBar p {
+    margin: 0;
+    padding: 10px;
+    flex: 1;
+}
+
+.Top {
+    top: 0;
+}
+
+.Centar {
+    justify-content: center;
+}
+
+.Sakriveno {
+    display: none !important;
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+.GreskaUnos {
+    border: 2px dotted red;
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+/* @media only screen and (max-width: 768px)  */
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#SnimiFIltereKontejner {
+    display: none;
+
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+#ZatvoriModalni {
+    cursor: pointer;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    /* margin: 10px; */
+}
+
+#ZatvoriModalni:hover {
+    color: #E10600FF;
+}
+
+#UnosSnimi  {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+#SnimiSetFilteraModalni {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#SnimiSetFilteraSlikaMod {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/svg/001-diskette.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#PredefinisaniKontejner {
+    display: none;
+
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.PodaciModalniLevo3 {
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.PodaciModalniLevo3 span {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* word-spacing: 60px; */
+    margin-right: 70px; 
+}
+.PodaciKontejner2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    color: #817F82;
+    margin-bottom: 20px;
+}
+
+#PodaciKontejner2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    color: #817F82;
+    margin-bottom: 20px;
+}
+
+.Brisanje {
+    cursor: pointer;
+    color: black;
+}
+
+.Brisanje:hover {
+    color: red;
+}
+
+.Primeni {
+    cursor: pointer;
+    color: black;
+}
+
+.Primeni:hover {
+    color: green;
+}
+
+#ZatvoriModalni2 {
+    cursor: pointer;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    /* margin: 10px; */
+}
+
+#ZatvoriModalni2:hover {
+    color: #E10600FF;
+}
+
+#BrisiSveFiltere {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.BrisiSveFiltereSlika {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/svg/025-clear-filter-2.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#RecSearch {
+    display: flex;
+    margin-top: 177px;
+    width: 49px;
+    height: 62px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-image: url("../images/svg/033-search-2.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    background-color: #AE8CA3;
+}
+
+#RecSearch:hover {
+    background-color: white;
+}
+
+#RecSearchKontejner {
+    display: none;
+
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+#ZatvoriRecSearch { 
+    cursor: pointer;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#ZatvoriRecSearch:hover {
+    color: #E10600FF;
+}
+
+#BrisiSveFiltereRecSearch {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    width: 230px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#PodaciRecSearch {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    color: #817F82;
+    margin-bottom: 20px;
+}

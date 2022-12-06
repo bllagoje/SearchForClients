@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Klijenti - PROJEKAT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="images/svg/032-search-1.svg">
+    </head>
+    <body>
+        <!-- kontejner1: -->
+        <div id="Kontejner1">
+            <!-- slika: -->
+            <div id="Levak">
+                <!-- recently search: -->
+                <div id="RecSearch"></div>
+            </div>
+            <!-- pretraga: -->
+            <div id="Pretraga">
+                <!-- leva strana pretrage: -->
+                <div id="PretragaLevo">
+                    <!-- ime i prezime: -->
+                    <div id="ImePrezime">
+                        <p>Ime, prezime</p>
+                        <input type="search" id="ImePrezimeUnos" placeholder="Ime, prezime"> 
+                    </div>
+                    <!-- godina rodjenja: -->
+                    <div id="GodRodjenja">
+                        <p>Godina rođenja</p>
+                        <!-- godina rodjenja od - do: -->
+                        <div id="GodRodjOdDo">
+                            <p>Od </p> <input type="search" maxlength="4" id="GodRodjOd" placeholder="0000"> 
+                            <p>Do </p> <input type="search" maxlength="4" id="GodRodjDo" placeholder="0000"> 
+                        </div>
+                    </div>
+                </div>
+                <!-- ----------------------------------------------------------------- -->
+                <!-- desna strana pretrage: -->
+                <div id="PretragaDesno">
+                    <!-- brend kartice: -->
+                    <div id="BrendKartice">
+                        <p>Brend kartice</p>
+                        <input type="text" id="BrendKarticeUnos" placeholder="Brend / Vrsta">
+                        <div id="CBBrendKartice">
+                        </div>
+                    </div>
+                    <!-- ----------------------------------------------------------------- -->
+                    <!-- dodatni filteri: -->
+                    <div id="DodatniFilteri" class="">
+                        <!-- slika dodatnih filtera: -->
+                        <div id="FilteriSlika"></div>
+                        <span id="FilterTekst">Prikaži dodatne filtere</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- kontejner2: -->
+        <div id="Kontejner2" class="Skriveno">
+            <!-- leva strana kontejner 2: -->
+            <div id="LevaStrana2"> 
+                <p>Dug</p>
+                <!-- klijenti bez duga: -->
+                <div class="Stavka"> 
+                    <div class="CheckBox " id="CBKlijentiBezDuga"></div>
+                    <label>Klijenti bez duga</label>
+                </div>
+
+                <!-- klijenti koji duguju iznos veci od: -->
+                <div class="Stavka" id="KlijentiIznos"> 
+                    <div class="CheckBox " id="CBKlijentiIznos"></div>
+                    <label>Klijenti koji duguju iznos veći od
+                        <input type="text" id="UnosIznosVeciOd">
+                    </label>
+                </div>
+            </div>
+
+            <!-- desna strana kontejner 2: -->
+            <div id="DesnaStrana2">
+                <p>Važenje kartice</p>
+                <div class="Stavka " id="KarticaVazi"> 
+                    <div class="CheckBox" id="CBKarticaVazi"></div>
+                    <label>Kartica važi još najmanje
+                        <input type="text" id="UnosKarticaVazi"> meseci
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- kontejener3: -->
+        <div id="Kontejner3">
+            <!-- dugme snimi set filtera: -->
+            <div id="SnimiSetFiltera" class="Skriveno">
+                <div id="SnimiSetFilteraSlika"></div>
+                <p>Snimi set filtera</p>
+            </div>
+
+            <!-- dugme pretrazi: -->
+            <div id="Pretrazi">
+                <div id="PretraziSlika"></div>
+                <p>Pretraži</p>
+            </div>
+
+            <!-- dugme brisi filtere: -->
+            <div id="BrisiFiltere">
+                <div id="BrisiFiltereSlika"></div>
+                <p>Briši filtere</p>
+            </div>
+
+            <!-- dugme predefinisani setovi filtera: -->
+            <div id="PredefinisaniSetoviFiltera" class="">
+                <div id="PredefinisaniSetoviFilteraSlika"></div>
+                <p>Predefinisani setovi filtera</p>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- snackbar kontejener: -->
+        <div id="SnackbarKontejner" class="Skriveno Centar">
+            <div id="SnackBar" class="SnackGreska">
+                <!-- Ikona -->
+                <div id="SnackIkona"></div>
+                <!-- Tekst -->
+                <p id="SnackTekst">Greška prilikom unos! Proverite unete podatke.</p>
+                <!-- X -->
+                <img id="SnackZatvori" src="images/svg/049-remove.svg" alt="" width="20" height="20">
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- kontejner4: -->
+        <div id="Kontejner4">
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- snimi set filtera modalni prozor: -->
+        <div id="SnimiFIltereKontejner"></div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- predefinisani setovi filtera modalni prozor: -->
+        <div id="PredefinisaniKontejner">
+            <div class="ModalniSadrzaj">
+                <span id="ZatvoriModalni2">&times;</span>
+                <div class="PodaciModalni">
+                    <span>Raspoloživi setovi filtera</span>
+                </div>  
+                <div id="PodaciKontejner2"></div>
+                <div id="BrisiSveFiltere">
+                    <div class="BrisiSveFiltereSlika"></div>
+                    <p>Briši sve filtere</p>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <!-- predefinisani setovi filtera modalni prozor: -->
+        <div id="RecSearchKontejner">
+            <div class="ModalniSadrzaj">
+                <span id="ZatvoriRecSearch">&times;</span>
+                <div class="PodaciModalni">
+                    <span><b>Recently searched</b> (istorija pretrage)</span>
+                </div>  
+                <div id="PodaciRecSearch"></div>
+                <div id="BrisiSveFiltereRecSearch">
+                    <div class="BrisiSveFiltereSlika"></div>
+                    <p>Briši istoriju pretrage</p>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <script src="./klijenti.js"></script>
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
