@@ -1,2 +1,2 @@
-# SearchForClients
+# Search For Clients (Vanilla JavaScript)
 
